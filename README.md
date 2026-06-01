@@ -74,6 +74,60 @@ uv.lock                           # Locked dependency versions
 
 ## Contact
 
+- Open issues: https://github.com/HKUSTDial/kddcup2026-data-agents-starter-kit/issues
 - Official website: https://dataagent.top
 - Discord: https://discord.com/invite/7eFwJQN3Fx
 - WeChat official account: `数据智能与分析实验室 DIAL`
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://dataagent.top">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=144x144&data=https://dataagent.top&bgcolor=ffffff&color=111827&margin=8"
+            alt="Official website QR code"
+            width="144"
+          />
+        </a>
+        <br />
+        Official Website
+      </td>
+      <td align="center">
+        <a href="https://discord.com/invite/7eFwJQN3Fx">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=144x144&data=https://discord.com/invite/7eFwJQN3Fx&bgcolor=ffffff&color=111827&margin=8"
+            alt="Discord QR code"
+            width="144"
+          />
+        </a>
+        <br />
+        Discord
+      </td>
+      <td align="center">
+        <img
+          src="https://dataagent.top/HKUSTGZ_DIAL.jpg"
+          alt="WeChat official account QR code"
+          width="144"
+        />
+        <br />
+        WeChat Official Account
+      </td>
+    </tr>
+  </table>
+</div>
+
+## Main Modules
+
+The same baseline layout is used inside each phase directory. For example, after entering `PHASE_1/` or `PHASE_2/`, the core modules are:
+
+| Module | Responsibility |
+| --- | --- |
+| `src/data_agent_baseline/benchmark/dataset.py` | Dataset loader |
+| `src/data_agent_baseline/tools/filesystem.py` | `list_context`, `read_csv`, `read_json`, `read_doc` |
+| `src/data_agent_baseline/tools/python_exec.py` | `execute_python` |
+| `src/data_agent_baseline/tools/sqlite.py` | `inspect_sqlite_schema`, `execute_context_sql` |
+| `src/data_agent_baseline/tools/registry.py` | Tool registration and terminal `answer` |
+| `src/data_agent_baseline/agents/prompt.py` | System prompt, task prompt, observation prompt |
+| `src/data_agent_baseline/agents/react.py` | ReAct runtime with JSON action protocol |
+| `src/data_agent_baseline/run/runner.py` | Single-task and benchmark execution |

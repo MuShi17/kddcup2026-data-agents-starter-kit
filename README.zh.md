@@ -74,6 +74,60 @@ uv.lock                           # 锁定的依赖版本
 
 ## 联系方式
 
+- 问题反馈： https://github.com/HKUSTDial/kddcup2026-data-agents-starter-kit/issues
 - 官方网站： https://dataagent.top
 - Discord： https://discord.com/invite/7eFwJQN3Fx
 - 微信公众号：`数据智能与分析实验室 DIAL`
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://dataagent.top">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=144x144&data=https://dataagent.top&bgcolor=ffffff&color=111827&margin=8"
+            alt="Official website QR code"
+            width="144"
+          />
+        </a>
+        <br />
+        官方网站
+      </td>
+      <td align="center">
+        <a href="https://discord.com/invite/7eFwJQN3Fx">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=144x144&data=https://discord.com/invite/7eFwJQN3Fx&bgcolor=ffffff&color=111827&margin=8"
+            alt="Discord QR code"
+            width="144"
+          />
+        </a>
+        <br />
+        Discord
+      </td>
+      <td align="center">
+        <img
+          src="https://dataagent.top/HKUSTGZ_DIAL.jpg"
+          alt="WeChat official account QR code"
+          width="144"
+        />
+        <br />
+        微信公众号
+      </td>
+    </tr>
+  </table>
+</div>
+
+## 主要模块
+
+每个阶段目录内部使用相同的 baseline 结构。例如进入 `PHASE_1/` 或 `PHASE_2/` 后，核心模块包括：
+
+| 模块 | 责任 |
+| --- | --- |
+| `src/data_agent_baseline/benchmark/dataset.py` | 数据集加载器 |
+| `src/data_agent_baseline/tools/filesystem.py` | `list_context`、`read_csv`、`read_json`、`read_doc` |
+| `src/data_agent_baseline/tools/python_exec.py` | `execute_python` |
+| `src/data_agent_baseline/tools/sqlite.py` | `inspect_sqlite_schema`、`execute_context_sql` |
+| `src/data_agent_baseline/tools/registry.py` | 工具注册与终止型 `answer` |
+| `src/data_agent_baseline/agents/prompt.py` | system prompt、task prompt、observation prompt |
+| `src/data_agent_baseline/agents/react.py` | 基于 JSON action 协议的 ReAct runtime |
+| `src/data_agent_baseline/run/runner.py` | 单任务和批量运行逻辑 |
